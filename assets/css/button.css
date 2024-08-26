@@ -1,0 +1,130 @@
+/*
+  ____  _    _ _______ _______ ____  _   _  _____ 
+ |  _ \| |  | |__   __|__   __/ __ \| \ | |/ ____|
+ | |_) | |  | |  | |     | | | |  | |  \| | (___  
+ |  _ <| |  | |  | |     | | | |  | | . ` |\___ \ 
+ | |_) | |__| |  | |     | | | |__| | |\  |____) |
+ |____/ \____/   |_|     |_|  \____/|_| \_|_____/ 
+*/
+
+/* copy button */
+.copy-btn {
+    position: absolute;
+    background: #a30000; /*#1DA1F2;*/
+    color: white;
+    width: 56px;
+    height: 24px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    padding: 1px;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+    z-index: 500; /* Ensure it appears above other elements */
+}
+
+.copy-btn:hover{
+    background-color: #d20000;/*#1681c4;*/
+}
+
+/* Base styles */
+
+
+/* Dark mode styles */
+body.dark-mode {
+    --body-background-color: #222222;
+    --text-color: #ffffff;
+    --grid-background-color: #222222;
+    --grid-text-color: #ffffff;
+    --topic-line-color: cyan;
+    --nav-bar-color: #121212;
+    --nav-bar-text-color: white;
+    --code-box-color: #404040;
+    --nav-ul-li-color: #222222;
+    --slider-background-color: red; /* moon */
+    --top-bar-color: #222222;
+    --border-line-color: white;
+    --toggle-bar: white;
+    --dropdown-color: #121212;
+    --dropdown-text-color: white;
+    --dropdown-hover-color: #222222;
+    --top-dropdown-shadow-color: rgba(255,255,255,0.1);
+    --figcaption-text: #777;
+    --slider-color: #1c0098;
+    --slider-shadow-shift: 0.4rem;
+    --slider-left: -2px;
+    --article-color: #121212;
+    --article-name-color: white;
+    --article-description-color: white;
+    --article-date-color: #aaa;
+    --black-svg-filters: invert(100%) sepia(100%) saturate(2%) hue-rotate(215deg) brightness(101%) contrast(101%);
+    --social-media-container-color: black;
+    --url-color: rgb(0, 217, 217);
+    --url-hover-color: rgb(0, 194, 0);
+    --material-link-color: #aaa;
+}
+
+
+/* Switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    margin-bottom: 0px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1681c4; /*#1681c4, #ccc*, rgb(100, 127, 212)*/
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: var(--slider-left);
+    bottom: 3px;
+    background-color: var(--slider-color);
+    box-shadow: var(--slider-shadow-shift) 0 0 0 var(--slider-background-color);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.slider:after{
+    background-color: red;
+}
+
+input:checked + .slider {
+    background-color: var(--slider-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(21px);
+}
+
+
+
+
+
+
+
+
+
+

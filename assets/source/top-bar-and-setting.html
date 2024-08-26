@@ -1,0 +1,146 @@
+<div class = "top-nav">
+    <div style=" width: 70px;">
+        <button class="toggle-btn" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+    </div>
+    <div class="left">
+        <a class = "top-buttons" href = "../index.html" > <!--onclick="changeTab('home')"-->
+            <i class="fa fa-home top-bar-icon" aria-hidden="true"></i> 
+            HOME
+        </a>
+        <a class = "top-buttons" href = "../about.html"> <!--onclick="changeTab('about')"-->
+            <i class="fa fa-square-o top-bar-icon" aria-hidden="true"></i> 
+            ABOUT
+        </a>
+        
+        <div class="dropdown">
+            <button onclick = "dropDown('notes')" class="dropbtn top-buttons">
+                <i class="fa fa-pencil-square-o top-bar-icon" aria-hidden="true"></i>
+                NOTES
+            </button>
+            <div id="notes"  class="dropdown-content">
+                <a href="../notes.html">Calculus</a>
+                <a href="../notes.html#de">ODE and PDE</a>
+                <a href="../notes.html#linear-algebra">Linear Algebra</a>
+                <a href="../notes.html#DSA">DSA</a>
+                <a href="../notes.html#others">Others</a>
+            </div>
+        </div> 
+        <div class="dropdown">
+            <button onclick = "dropDown('recommended-materials')" class="dropbtn top-buttons">
+                <i class="fa fa-book top-bar-icon" aria-hidden="true"></i>
+                RECOMMENDED MATERIALS
+            </button>
+            <div id="recommended-materials"  class="dropdown-content">
+                <a href="../recommended-materials.html">Books</a>
+                <a href="../recommended-materials.html#lecture-notes">Lecture Notes</a>
+                <a href="../recommended-materials.html#websites">Websites</a>
+                <a href="../recommended-materials.html#youtube">Youtube Channels</a>
+            </div>
+        </div> 
+        <a class = "top-buttons" href = "../contact.html">
+            <i class="fa fa-space-shuttle top-bar-icon" aria-hidden="true"></i> 
+            CONTACT
+        </a>
+    </div>
+    
+    <div class = "right">
+        <div class="search-bar-container" id="searchBarContainer">
+            <input type="text" id="searchBar" class = "search-bar" placeholder="Type / to search" autocomplete="off">
+            <input type="text" id="searchBarMobile" class = "search-bar-mobile" placeholder="Search here" autocomplete="off">
+            <div id="autocomplete-dropdown" class="autocomplete-dropdown"></div>
+        </div>
+        <div class="dark-switch-container">
+            <label class="switch">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class = "setting-container">
+            <input type="checkbox" id="toggle">
+            <label for="toggle" id="toggleButton">
+                <div class="gear">
+                <div class="center"></div>
+                <div class="tooth"></div>
+                <div class="tooth"></div>
+                <div class="tooth"></div>
+                <div class="tooth"></div>
+                </div>
+            </label>
+
+
+            <div id="settings_window" class = "hidden">
+                <div style= "font-size: 20px">Settings</div>
+                <div class = "line-7"></div>
+                <div class = "settings_window-container">
+                    <div class = "setting-window-right">
+                        <div class = "sw_1st_column_items">Body Font</div>
+                        <div class = "sw_1st_column_items">Font Size</div>
+                        <div class = "sw_1st_column_items">Code Theme (Light Mode)</div>
+                        <div class = "sw_1st_column_items">Code Theme (Dark Mode)</div>
+                    </div>
+                    <div class = "setting-window-right">
+                        <div class="custom-select">
+                            <select id="font-select">
+                                <option value="Computer-Modern">Computer Modern, serif: Default</option>
+                                <option value="sans-serif">Arial, sans-serif</option>
+                                <option value="Georgia">Georgia, serif</option>
+                                <option value="Times New Roman">Times New Roman, serif</option>
+                                <option value="Verdana">Verdana, sans-serif</option>
+                            </select>
+                        </div>
+                        <div class="custom-select">
+                            <select id="font-size-select">
+                                <option value="14px">Small</option>
+                                <option value="16px">Medium: Default</option>
+                                <option value="18px">Large</option>
+                                <option value="20px">Extra Large</option>
+                            </select>
+                        </div>
+                        <div class="custom-select">
+                            <select id="light-theme-select"> <!--prism-min-->
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">Min: Default</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-solarizedlight.min.css">Solarized Light</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-base16-ateliersulphurpool.light.min.css">Light</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-coldark-cold.min.css">Cold</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-duotone-light.min.css">Duotone Light</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.min.css">GH</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-gruvbox-light.min.css">Gruvbox Light</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-light.min.css">Material Light</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-light.min.css">One Light</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-vs.min.css">VS Min</option>
+                            </select>
+                        </div>
+                        <div class="custom-select">
+                            <select id="dark-theme-select">
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-okaidia.min.css">Okaidia: Default</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css">Atom Dark</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css">Tomorrow</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-twilight.min.css">Twilight</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-holi-theme.min.css">Holi</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-darcula.min.css">Dracula</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-coldark-dark.min.css">Dark Cold</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-night-owl.min.css">Night Owl</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-duotone-forest.min.css">Forest</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-duotone-sea.min.css">Deep Sea</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-duotone-space.min.css">Outer Space</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-z-touch.min.css">Z-Touch</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-gruvbox-dark.min.css">Gruvbox Dark</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-dark.min.css">One Dark</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css">Dark Plus</option>
+                                <option value="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-shades-of-purple.min.css">Shade of Purple</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>

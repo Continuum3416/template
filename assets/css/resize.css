@@ -1,0 +1,220 @@
+/*
+  _____  ______  _____ _____ ____________ 
+ |  __ \|  ____|/ ____|_   _|___  /  ____|
+ | |__) | |__  | (___   | |    / /| |__   
+ |  _  /|  __|  \___ \  | |   / / |  __|  
+ | | \ \| |____ ____) |_| |_ / /__| |____ 
+ |_|  \_\______|_____/|_____/_____|______|
+
+*/
+@media all and (min-width: 1800px){
+    #rec-article-container{
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    :root {
+        --side-nav-width: 450px;
+        --top-bar-height: 70px;
+    }
+
+    
+    .material-container{
+        max-width: 70%;
+    }
+}
+
+@media all and (max-width: 1385px) {
+    .topic{
+        margin-top: 70px;
+    }
+    .left{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .right{
+        margin-left: 0px;
+    }
+    
+    .equation{
+        width: 90vw; /* important */
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    
+}
+
+@media all and (max-width: 1200px) {
+    .search-bar-container{
+        width: 100%;
+    }
+    .topic{
+        margin-top: 70px;
+    }
+    .top-nav{
+        justify-content: start;
+        height: var(--top-bar-height);
+    }
+    body.nav-open {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .right{
+        justify-content: center;
+        width: 100%;
+    }
+    .Banner{
+        max-width: 100%;
+    }
+    .general-wrapper{
+        max-width: 100%;
+    }
+    .toggle-btn:hover .bar{
+        background-color: white; 
+    }
+    .top-buttons:hover, .dropbtn:hover{
+        color: white;
+    }
+    .search-bar, .search-bar-mobile{
+        border-radius: 8px;
+    }
+}
+
+
+@media all and (max-width: 1080px){
+    .side-nav{
+        display: inline-block;
+    }
+    .line-2{
+        display: block;
+    }
+    .left{
+        display: none;
+    } 
+    .image-block{
+        width: 80%;
+    }
+    .footer-title{
+        width: 20%;
+    }
+}
+@media all and (max-width: 580px) {
+    .topic{
+        margin-top: 45px;
+    }
+    .switch{
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .general-wrapper{
+        /*
+        margin-left: 0;
+        margin-right: 0;
+        */
+        max-width: 90%;
+    }
+
+    h1.title{
+        font-size: 1.9em;
+    }
+    h2, h3{
+        font-size: 1.3em
+    }
+
+    .topic{
+        max-width: 100%;
+        font-size: 14px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-right: 0;
+    }
+
+    body.nav-open {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar.open {
+        width: 330px;
+    }
+
+    .dark-switch-container{
+        width: 70px; 
+    } 
+    .front-img{
+        display: none;
+    }
+    .mobile-front-img{
+        display: block;
+    }
+    p, h1, h2, h3 {
+        margin-left:0px; 
+    }
+    pre[class*="language-"] {
+        font-size: 10px; 
+        line-height: 1.5; 
+    }
+    .dark-mode pre[class*="language-"] {
+        font-size: 10px; /* font size for dark mode */
+        line-height: 1.5;
+    }
+    #right-code-box{
+        width: 300px;
+        padding-left: 20px;
+        padding-right: 40px;
+        float: bottom;
+    }
+    .box{
+        width: 85%;
+        max-width: 100%;
+    }
+    .copy-btn{
+        display: none;
+    }
+    .two-columns-block{
+        flex-direction: column-reverse;
+    }
+    #settings_window{ /* #settings_window.show */
+        max-width: 80%;
+        height: 200px;
+    }
+    .settings_window-container{
+        grid-template-columns: 150px 1fr;
+        font-size: 12px;
+    }
+    .custom-select select{
+        height: 30px;
+    }
+    .image-block{
+        width: 100%;
+    }
+    #rec-article-container{
+        grid-template-columns: 1fr;
+    }
+    #rec-article-container {
+        gap: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    /* .search-bar, .search-bar-mobile{
+        font-size: 12px;
+    } */
+    .dropdown-item{
+        font-size: 0.8em;
+    }
+}
+
+/*
+⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢰⡿⠋⠁⠀⠀⠈⠉⠙⠻⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣿⠇⠀⢀⣴⣶⡾⠿⠿⠿⢿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣀⣀⣸⡿⠀⠀⢸⣿⣇⠀⠀⠀⠀⠀⠀⠙⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣾⡟⠛⣿⡇⠀⠀⢸⣿⣿⣷⣤⣤⣤⣤⣶⣶⣿⠇⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀
+⢀⣿⠀⢀⣿⡇⠀⠀⠀⠻⢿⣿⣿⣿⣿⣿⠿⣿⡏⠀⠀⠀⠀⢴⣶⣶⣿⣿⣿⣆
+⢸⣿⠀⢸⣿⡇⠀⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⣿⡇⣀⣠⣴⣾⣮⣝⠿⠿⠿⣻⡟
+⢸⣿⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠉⠀
+⠸⣿⠀⠀⣿⡇⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠉⠀⠀⠀⠀
+⠀⠻⣷⣶⣿⣇⠀⠀⠀⢠⣼⣿⣿⣿⣿⣿⣿⣿⣛⣛⣻⠉⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⣿⣀⣀⣀⣼⡿⢿⣿⣿⣿⣿⣿⡿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠙⠛⠛⠛⠋⠁⠀⠙⠻⠿⠟⠋⠑⠛⠋⠀
+*/

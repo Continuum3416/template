@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="subject" content='This is the homepage'>
+    <meta name="description" content="This is the homepage" />
+    <meta name="keywords" content="none"/>
+    <meta name="author" content="Don Le, ledongduu@gmail.com"/>
+    <meta name="format-detection" content="telephone=no"> <!-- Disable number string recognition-->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="icon" href="../Images/Logo/pendulum_gradient.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="../assets/css/canvas-banner.css">
+    <style>
+        #bannerCanvas{
+            background: linear-gradient(to top,rgb(0, 0, 235) 0%,rgb(0, 185, 226) 100%);
+        }
+    </style>
+</head>
+
+<body class="nav-open light-mode">
+    <div class = "top-nav"></div>
+    <nav class="navbar open" id="navbar">
+        <div id="logo"></div>
+        <div class = "side-nav-container"></div>
+        <div class = "highlights-and-attribute"></div>
+    </nav>
+
+    <div class="content-grid">
+        <div class="home-banner" id="home-banner"></div><script src="/assets/js/canvas-banner.js"></script>
+        <div class = "general-wrapper" id="home">
+            <div class = "topic">
+                Homepage
+            </div>
+            <h1 class="home-title">Articles</h1>
+            <p>
+                The computer is unquestionably one of the most significant inventions of all time. It enables us to do almost anything in the modern world, such as weather modeling, but everything a computer does boils down to its ability to execute computation, which it does considerably faster than a human. The RK4 algorithm is a prime example of how powerful computers can be. If we set the number of iterations to one billion, it would take a person hundreds of years of non-stop calculations to finish, but today's computers can easily reduce that number to less than 10 seconds.
+            </p>
+            <div id="rec-article-container"></div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/assets/js/scripts.js"></script>
+    <script src="/assets/js/load.js"></script>
+    <script src="/assets/js/homepage-setting.js"></script>
+</body>
+</html>

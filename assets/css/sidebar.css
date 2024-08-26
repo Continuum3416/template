@@ -1,0 +1,336 @@
+/*
+   _____ _____ _____  ______   ____          _____  
+  / ____|_   _|  __ \|  ____| |  _ \   /\   |  __ \ 
+ | (___   | | | |  | | |__    | |_) | /  \  | |__) |
+  \___ \  | | | |  | |  __|   |  _ < / /\ \ |  _  / 
+  ____) |_| |_| |__| | |____  | |_) / ____ \| | \ \ 
+ |_____/|_____|_____/|______| |____/_/    \_\_|  \_\
+
+*/
+
+:root{
+    --nav-bar-slide-in-time: .5s;
+    --nav-bar-slide-out-time: .5s;
+    --major-slide-in-time: .5s;
+    --major-slide-out-time: .5s;
+    --ul-slide-in-time: 0s; /* NOTE! */
+    --ul-slide-out-time: .5s;
+    --logo-title-transition-time: .5s;
+}
+
+header.major {
+    padding-left: 20px; /* Adjust the padding value to create space from the browser border */
+    padding-bottom: 20px;
+}
+
+.major h2 {
+    font-size: 1.3em; /* Adjust font size as needed */
+    font-family: "Courier New", monospace; /* Use the appropriate font family */
+    font-weight: bold; /* Make the text bold */
+    color: var(--nav-bar-text-color); /* Set the text color */
+    border-bottom: 2px solid #ea0000; /* Add the bottom border */
+    padding-left: 0;
+    display: inline-block; /* Make the border wrap only around the text */
+    padding-bottom: 5px; /* Adjust space between text and border */
+    margin-bottom: 0; /* Adjust space between the element and the next one */
+    margin-left: 0;
+    text-align: left;
+}
+
+/* Slide in effect for the "major" section */
+.major {
+    transform: translateX(0);
+    transition: transform var(--major-slide-in-time) ease; /* Adjust the timing as needed */
+}
+
+/* When the navbar is collapsed, slide "major" section out */
+.navbar.closed .major {
+    transform: translateX(-250px); /* Adjust based on the collapsed width */
+    transition: transform var(--major-slide-out-time) ease;
+}
+
+.navbar.open .logo-title,  .navbar.open .attribute{
+    opacity: 1;
+    transition: opacity var(--logo-title-transition-time) ease;
+}
+
+.navbar.closed .logo-title,  .navbar.closed .attribute{
+    opacity: 0; /* or any other desired value */
+}
+
+
+
+.side-nav{
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: none;
+}
+
+.side-nav ul li li a{
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.side-buttons{
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.side-buttons:hover{
+    transition-duration: 50ms;
+    cursor: pointer;
+}
+
+.side-summary{
+    font-family: "Courier New", monospace;
+    font-size: 1.3em;
+    font-weight: bold; 
+    border-bottom: 2px solid #ea0000;
+    display: inline-block;
+    padding-left: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 18px;
+}
+
+details summary::-webkit-details-marker {
+    display:none;
+}
+
+.side-nav-details{
+    margin: 0;
+}
+
+.side-nav-summary{
+    margin: 0;
+    padding: 0;
+}
+
+.side-nav-details .side-nav-summary{
+    display: inline-block;
+}
+.side-nav ul li li:hover{
+    border-left: 2px solid blue;
+} 
+.side-nav-details .side-nav-summary::-webkit-details-marker {
+    display: none;
+}
+
+.major h2:hover, .side-nav:hover{
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    height: 100%;
+    width: 100px;
+    background-color: var(--nav-bar-color);
+    color: var(--nav-bar-text-color);
+    top : var(--top-bar-height);
+    left: 0;
+    bottom: 0;
+    font-family: var(--body-font); /*"sans-serif"*/
+    font-size: 15px;
+    border-right: 2px solid black;
+    overflow-y: scroll; /* Allows scrolling but hides scrollbars */
+    overflow-x: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 800;
+}
+
+.navbar::after{
+    content: '';
+    display: block;
+    height: 150px;
+    width: 100%;
+}
+
+.navbar::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.navbar.open {
+    width: var(--side-nav-width);
+    transition: width var(--nav-bar-slide-out-time) ease;
+}
+
+.navbar.closed {
+    width: 0;
+    transition: width var(--nav-bar-slide-in-time) ease;
+}
+
+.attribute{
+    height: 120px; 
+    display: flex;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 90%;
+    color: #aaa;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+
+nav ul, .side-nav ul{
+    list-style-type: none;
+    padding-left: 15px;
+    padding-right: 10px;
+    margin: 0;
+    transition: opacity 0.5s, transform 0.5s; /* Smooth sliding and fading effect */
+    opacity: 1;
+    transform: translateX(0);
+    /*background: var(--nav-bar-color);*/
+}
+
+
+/* Slide out/in effect, must be navbar */
+.navbar.open ul {
+    opacity: 1;
+    transform: translateX(0); /* Slide content into view when open */
+    /*transition: var(--ul-slide-in-time);*/
+}
+
+.navbar.closed ul {
+    opacity: 0; /* Fully hidden */
+    transform: translateX(-100%); /* Slide out */
+    transition: var(--ul-slide-out-time);
+    
+}
+
+.toc ul li {
+    border-left: 1.5px solid rgb(183, 183, 183);
+}
+
+/* .toc ul li::after{
+    position: absolute;
+    content:  "";
+    background: rgb(183, 183, 183);
+    height: 1px;
+    width: 2%;
+    bottom: 50%;
+    left: 0;
+    margin: 0;
+} */
+
+.toc ul li, .side-nav ul li, .highlights ul li {
+    padding: 5px; /* Padding btw links */
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    text-align: left;
+    background: var(--nav-bar-color);
+}
+
+.toc ul li:hover, .side-nav ul li:hover, .highlights ul li:hover {
+    border-left: 2px solid red;
+    border-radius: 2px;
+}
+
+.toc ul ul, .side-nav ul ul{
+    padding-left: 20px; /* Add some indentation for nested lists */
+    margin: 0; /* Remove default margin */
+}
+
+.toc ul ul li, .side-nav ul ul li {
+    padding: 7px;
+    text-align: left; /* Align text to the left */
+}
+
+.toc ul li li{
+    /*background: linear-gradient(to left, var(--nav-bar-color) 50%, var(--nav-ul-li-color) 50%) right;*/
+    background-size: 200%;
+    transition: background-position .3s ease-out;
+}
+
+.toc ul li li:hover {
+    background-position: left;
+    border-left: 2px solid blue;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.toc ul li li li:hover {
+    border-left: 2px solid green;
+
+}
+
+
+.toggle-btn {
+    position: fixed;
+    top: calc(0.5*(var(--top-bar-height) - 35px));
+    width: 35px;
+    height: 35px;
+    left: 15px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: rgb(26, 26, 26); /*var(--top-bar-color)*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.toggle-btn .bar {
+    padding-bottom:0;
+    padding-top:0;
+    width: 20px; /* Adjust width of the bars */
+    height: 2.5px; /* Adjust height of the bars */
+    background-color: var(--toggle-bar); /* Color of the bars */
+    border-radius: 1.25px;
+    margin: 2.5px; /* Space between the bars */
+    transition: all 0.3s;
+    transform-origin: left;
+}
+
+.toggle-btn:hover .bar {
+    background-color: #1681c4; /* Color of the bars on hover */
+}
+
+
+
+/* Optional: Style the bar icon to rotate when open */
+body.nav-open .toggle-btn .bar:nth-child(1) {
+    transform: rotate(45deg) translate(0px, -2px) scaleX(1.251);
+}
+
+body.nav-open .toggle-btn .bar:nth-child(2) {
+    opacity: 0;
+}
+
+body.nav-open .toggle-btn .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(0px, 2px) scaleX(1.251);
+}
+
+
+.test-img{
+    display: block;
+    width: 80%;
+    height: auto; 
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-li{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+

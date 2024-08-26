@@ -1,0 +1,61 @@
+{
+    "articles":
+    [
+        {
+            "title": "The Quest to Finding Chladni Patterns, Part 1",
+            "image": "../Images/chladni_1.png",
+            "link": "../Blogs/the-quest-to-finding-chladni-patterns.html",
+            "description": "Simulating Chladni's pattern using the wave equation model.",
+            "date": "Updated June 14, 2024"
+        },
+        {
+            "title": "Simulating the Brachistochrone problem",
+            "image": "../Images/brachistochrone.jpg",
+            "link": "https://example.com/js-event-loop",
+            "description": "The shortest path is not always the fastest path.",
+            "date": "Updated"
+        },
+        {
+            "title": "A More In-depth Look of Snell's Law",
+            "image": "../Images/snell_s_law_drawing.jpg",
+            "link": "https://example.com/css-grid",
+            "description": "Simple idea, complex derivation. Snell's law describe the relationship between the angle of incidence and angle of reflection.",
+            "date": "Updated"
+        },
+        {
+            "title": "Green's Function",
+            "image": "../Images/GreensFunctionExample_1000.svg",
+            "link": "https://example.com/css-grid",
+            "description": "An in-depth view of how to use Green's functions and their physical meaning.",
+            "date": "Updated"
+        },
+        {
+            "title": "The Quest to Finding Chladni Patterns, Part 2",
+            "image": "../Images/chladni-patterns.jpg",
+            "link": "https://example.com/css-grid",
+            "description": "Simulating Chladni's pattern using the Biharmonic equation model.",
+            "date": "Updated"
+        },
+        {
+            "title": "Accelerating Feature Extraction and Image Stitching Algorithm Using Nvidia CUDA",
+            "image": "../Images/CUDA_process_0_serial_30_imgs.png",
+            "link": "https://example.com/css-grid",
+            "description": "Accelerate ORB, feature matching, warping, seam finding, and image composition using C++ OpenCV and CUDA.",
+            "date": "Updated August 10, 2024"
+        },
+        {
+            "title": "How to find maxima and minima of an n-th dimensional function",
+            "image": "../Images/3d_function.png",
+            "link": "https://example.com/css-grid",
+            "description": "Utilizing the Hessian matrix and related numerical methods to find maxima/minima/saddle point.",
+            "date": "Updated May 25, 2024"
+        },
+        {
+            "title": "Slightly More Interesting Inertia Problems",
+            "image": "../Images/inertia.gif",
+            "link": "https://example.com/css-grid",
+            "description": "If mass is an object's resistance to change of motion due to force, then moment of inertia is its resistance to rotation due to torque. This article explore more about moment of inertia, but with interesting shapes.",
+            "date": "Updated"
+        }
+    ]
+}
